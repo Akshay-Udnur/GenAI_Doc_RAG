@@ -1,0 +1,255 @@
+/* Hide bult in header section */
+[data-testid="stHeader"]{
+    height: 0.1rem ;
+    background:rgba(255, 255, 255, 0)
+}
+
+/* Main Page Border layout */
+.main .block-container {
+    padding-top: 0.1rem;
+    padding-bottom: 0rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    /* background-color: #E1EDFA; */
+}
+
+.title {
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: center;
+    text-align: center;
+    color: #00172bcc;
+}
+
+.subtitle {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    /* color: #535050bd; */
+    color: #00172bcc;
+}
+
+/* App description */
+.appDescriptioncontainer {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.app-name {
+    font-size: 24px; /* Set your desired font size */
+    /* font-weight: bold; */
+    color: #535050; /* Set your desired text color */
+
+}
+.brand_logo_namestyle {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.textHeading{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    color: #799BE6;
+
+}
+
+.textDescription{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+    color: #6b6767;
+
+}
+
+
+/* dashboard */
+.dashboardText{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 50;
+    line-height: normal;
+    text-align: center;
+    color: #706f6e;
+
+}
+
+/* New Headings */
+.section-headings {
+    background-color: #DAE8FC;
+    color: #272626;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* select box drop down list sytling */
+
+.st-ax {
+    border-bottom-left-radius: 0rem;
+}
+.st-av {
+    border-top-right-radius: 0rem;
+}
+
+/* styling the  Section tabs */
+button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* color:grey;   */
+    align-items: center;
+    border-top-left-radius: 5px;
+    
+  }
+
+/* styling the  Section tabs  when selected*/
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: #799BE6; /* Replace #YOUR_SELECTED_COLOR with your preferred color */
+    color: white !important; /* Replace #YOUR_SELECTED_TEXT_COLOR with your preferred text color */
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    
+    }
+
+/* Hover style for the text of tabs */
+button[data-baseweb="tab"]:hover > div[data-testid="stMarkdownContainer"] > p {
+    color: #556B8D !important;  /* Color of the text on hover */
+}
+
+.css-16idsys p {
+    word-break: break-word;
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+
+/* line styling */
+.st-ea {
+    background-color: #b2c3e8;
+}
+
+/* Text labels for selectbox and textbox/text area */
+.css-16idsys p {
+    word-break: break-word;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+/* --------------------------------- */
+
+/* .css-4e89o3 {
+    width: 935px;
+    position: relative;
+    text-align: center;
+  } */
+
+/* ------------------------------------------------------------- */
+/* button styling */
+.css-7ym5gk{
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-weight: 400;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    min-height: 38.4px;
+    margin: 0px;
+    line-height: 1.6;
+    color: white;
+    width: auto;
+    user-select: none;
+    background-color: #0c0b5a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.css-7ym5gk:hover {
+    background-color: #ffffff; 
+    color: #333333;
+    /* border-color:#8AA4E9 ; */
+}
+
+.css-7ym5gk:active {
+    color: #EA4C89; 
+    border-color: #EA4C89; 
+    background-color: #ffffff; 
+}
+
+
+/* Hover effect for button */
+button[data-testid="baseButton-secondary"]:hover {
+    background-color: #34495E;                       /* A shade lighter on hover */
+    color:white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);            /* Deeper shadow on hover */
+    transform: scale(1.05); 
+    transition: transform 0.3s;                     /* Subtle lift effect */
+}
+/* --------------------------------- */
+
+.header-with-tooltip {
+    display: flex;
+    align-items: center; 
+}
+
+.tooltip {
+position: absolute;
+bottom: 70%; 
+right: 70%; 
+transform: translateY(-8px); 
+background-color: #502c46!important;
+color: #8ec1ce!important;
+border-radius: 20px;
+padding: 8px 12px;
+font-size: 2rem;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease-out;
+width: 600px;
+text-align: center;
+white-space: normal;
+word-wrap: break-word;
+line-height: 2.5;
+z-index: 9999;
+}
+
+
+
+.info-icon {
+    cursor: pointer;
+    position: relative; 
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+.info-icon:hover {
+    transform: scale(1.1);
+}
+
+.info-icon:hover > .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* radio button style */
+[role=radiogroup]{
+    gap: 10rem;
+}
