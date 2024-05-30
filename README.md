@@ -11,4 +11,5 @@ Run `streamlit run app.py` in Terminal. It will create .csv of result with missp
 
 ### Application web page -
 ![Screenshot](images/app1.png)
+-
 ![Screenshot](images/app2.png)
