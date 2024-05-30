@@ -10,5 +10,5 @@ Run `streamlit run app.py` in Terminal. It will create .csv of result with missp
 - Upload file and ask quetion related to the document -
 
 ### Application web page -
-![](images\app1.png)
-![](images\app2.png)
+![Screenshot](images/app1.png)
+![Screenshot](images/app2.png)
