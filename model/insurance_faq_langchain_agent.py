@@ -14,7 +14,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ANYSCALE_API_KEY=os.getenv('ANYSCALE_API_KEY')
-ANYSCALE_API_KEY=ANYSCALE_API_KEY
 os.environ["ANYSCALE_API_BASE"]='https://api.endpoints.anyscale.com/v1'
 os.environ['ANYSCALE_API_KEY']=ANYSCALE_API_KEY
 ANYSCALE_MODEL_NAME='meta-llama/Meta-Llama-3-70B-Instruct'
