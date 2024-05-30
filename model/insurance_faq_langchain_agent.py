@@ -53,12 +53,11 @@ def load_data(file_path: str) -> BaseLoader:
 @st.cache_resource
 def define_question_prompt():
     prompt_template = """
-    Have a conversation with a human where you are a insurance advisor which parse the provided insurance policies and answer the questions based on it.
-    Answer the human questions based on the provided insurance document in pricise manner.'
-    Do not answer any questions other than insurance.
+    Have a conversation with a human where you are a advisor which parse the provided document and answer the questions based on it.
+    Answer the human questions based on the provided document in pricise manner.'
+    If answer is not is document then return don't have answer
     If human is greeting you, greet back politely.
     Do not use any previous knowledge.
-    And answer the question in same language format in which question is asked.
     
     {context}
 

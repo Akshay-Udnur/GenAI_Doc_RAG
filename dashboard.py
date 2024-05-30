@@ -35,29 +35,36 @@ class Dashboard:
         st.success(_gettext("Experience our application with Llama 2 model."))
     
         with st.container():     
-            content_column, chatbot_column  =  st.columns((0.46,0.54))
+            # content_column, chatbot_column  =  st.columns((0.46,0.54))
+            _,upload,_  =  st.columns((1,1,1))
             #--------content column------------------------- 
-            with content_column:
-                uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
-                print('st.session_state.encodign_  - ',st.session_state.encoding_)
-                if uploaded_file is not None:
-                    temp_file = f"{os.getcwd()}/data/{uploaded_file.name}"                        
-                    # if st.session_state.encoding_ == True:
-                    try:
-                        with open(temp_file, "wb") as f:
-                            f.write(uploaded_file.getvalue())
-                        print("LLAMA 2 Model Activated")
-                        self.insurance_agent=setup_insurance_agent_llama(temp_file)
-                    except Exception as e:
-                        log.error(f"OpenAI request failed with exception - {e}")
-                        # st.session_state.encoding_ = False
-                        
-                    st.markdown(f"<div class='section-headings'><b>Uploaded Document</b></div>", unsafe_allow_html=True)
-                    st.write('')
-                    displayPDF(temp_file)
+            # with content_column:
+            with upload:
+                st.session_state.uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
+                if st.session_state.uploaded_file is not None:
+                    st.session_state.file_apth = f"{os.getcwd()}/data/{st.session_state.uploaded_file.name}"
+
+            document_column, chat_column  =  st.columns((0.46,0.54))
+            with document_column:
+                if st.session_state.uploaded_file is not None:
+                    if st.session_state.encoding_ == True:
+                        try:
+                            with open(st.session_state.file_apth, "wb") as f:
+                                f.write(st.session_state.uploaded_file.getvalue())
+                            print("LLAMA 2 Model Activated")
+                            self.insurance_agent=setup_insurance_agent_llama(st.session_state.file_apth)
+                        except Exception as e:
+                            log.error(f"OpenAI request failed with exception - {e}")                
+                        st.session_state.encoding_ = False       
+                st.markdown(f"<div class='section-headings'><b>Uploaded Document</b></div>", unsafe_allow_html=True)
+                st.write('')
+                try:
+                    displayPDF(st.session_state.file_apth)
+                except:
+                    pass
 
             #--------Chatbot column-------------------------
-            with chatbot_column:
+            with chat_column:
                 chat_heading = _gettext('Ask your Insurance Queries here!!')
                 st.markdown(f"<div class='section-headings'><b>{chat_heading}</b></div>", unsafe_allow_html=True)
                 st.write('')   

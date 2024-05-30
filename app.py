@@ -17,6 +17,12 @@ if 'text_value' not in st.session_state:
 if 'encoding_' not in st.session_state:
     st.session_state.encoding_ = True
 
+if 'file_apth' not in st.session_state:
+     st.session_state.file_apth = None
+
+if 'uploaded_file' not in st.session_state:
+     st.session_state.uploaded_file = None
+
 # Page Configuraion
 st.set_page_config(page_title=_gettext("Dcument RAG"),
                    layout="wide",
