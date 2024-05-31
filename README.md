@@ -4,7 +4,7 @@
 - Install requirements.txt `pip install -r requirements.txt`
 
 ### Prediction App - 
-Run `streamlit run app.py` in Terminal. It will create .csv of result with misspelt_name and list of ids for each misspelt city name.
+Run `streamlit run app.py` in Terminal. It will create the webpage as below.
 
 - UI for Document GenAI RAG -
 - Upload file and ask quetion related to the document -
